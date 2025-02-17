@@ -1,0 +1,11 @@
+nornir
+nornir_utils
+nornir_jinja2
+nornir_netmiko
+nornir_netbox
+napalm
+fastapi[standard]
+ipython
+ipdb
+pynetbox
+Jinja2

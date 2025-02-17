@@ -1,0 +1,8 @@
+username admin secret @ut0net0p$
+!
+management api http-commands
+   no shut
+!
+int Eth0/1
+  no shut
+  ip add 12.12.12.2 255.255.255.0

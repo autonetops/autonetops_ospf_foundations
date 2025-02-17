@@ -1,0 +1,9 @@
+ip domain name autonetops
+!
+username admin priv 15 secret @ut0net0p$
+!
+ip ssh version 2
+!
+int Eth0/1
+  no shut
+  ip add 12.12.12.2 255.255.255.0

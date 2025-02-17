@@ -1,0 +1,74 @@
+{
+  "build": { 
+    "dockerfile": "Dockerfile",
+    "args": {
+        "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}",
+        "CLAB_VERSION": "${localEnv:CLAB_VERSION}",
+        "PRIV_KEY_NAME": "${localEnv:PRIV_KEY_NAME}"
+    }
+  },
+  "hostRequirements": {
+      "cpus": 4,
+      "memory": "16gb",
+      "storage": "32gb"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder}/labs/${TOPIC}/${NAME},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace/tasks",
+  "containerEnv": {
+      "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+      "CEOS_LAB_VERSION": "${localEnv:CEOS_LAB_VERSION}"
+  },
+  "features": {
+      "ghcr.io/devcontainers/features/github-cli:1": {},
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+      "ghcr.io/devcontainers/features/terraform:1": {}
+  },
+  "secrets": {
+      "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
+      },
+  },
+  "customizations": {
+      "codespaces": {
+        "openFiles": [
+          "../${NAME}.md"
+        ]
+      },
+      "vscode": {
+          "extensions": [
+                // git essentials
+                "piotrpalarz.vscode-gitignore-generator",
+                "mhutchie.git-graph",
+                "donjayamanne.githistory",
+                // spell checker
+                "streetsidesoftware.code-spell-checker",
+                // drawio and tldraw
+                // excalidraw is pre-installed in universal
+                "hediet.vscode-drawio",
+                "tldraw-org.tldraw-vscode",
+                // markdown
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-checkbox",
+                "DavidAnson.vscode-markdownlint",
+                // various tools
+                "tuxtina.json2yaml",
+                "mutantdino.resourcemonitor",
+                "fabiospampinato.vscode-terminals",
+                //"marp-team.marp-vscode",
+                // Terraform
+                "hashicorp.terraform",
+                //Containerlab
+                "srl-labs.vscode-containerlab",
+                "marp-team.marp-vscode"
+            ]
+      }
+  },
+  "forwardPorts": [2222],
+  "portsAttributes": {
+    "2222": {
+      "label": "FastAPI"
+    }
+  },
+  "postCreateCommand": "postCreate.sh",
+  "postStartCommand": ["sudo -E containerlab deploy -t ../${NAME}.clab.yaml"]
+}
