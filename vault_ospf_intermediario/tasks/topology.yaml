@@ -1,20 +1,24 @@
-- ip: 172.20.20.11
-  name: r1
-  type: arista_eos
-  username: admin
-  password: autonetops
-- ip: 172.20.20.12
-  name: r2
-  type: arista_eos
-  username: admin
-  password: autonetops
-- ip: 172.20.20.13
-  name: r3
-  type: arista_eos
-  username: admin
-  password: autonetops
-- ip: 172.20.20.13
-  name: r4
-  type: arista_eos
-  username: admin
-  password: autonetops
+- name: r1
+  netmiko:
+    host: 172.20.20.11
+    device_type: arista_eos
+    username: admin
+    password: autonetops
+- name: r2
+  netmiko:
+    host: 172.20.20.12
+    device_type: arista_eos
+    username: admin
+    password: autonetops
+- name: r3
+  netmiko:
+    host: 172.20.20.13
+    device_type: arista_eos
+    username: admin
+    password: autonetops
+- name: r4
+  netmiko:
+    host: 172.20.20.14
+    device_type: arista_eos
+    username: admin
+    password: autonetops

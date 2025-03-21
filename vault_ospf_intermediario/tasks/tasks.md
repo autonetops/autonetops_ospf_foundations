@@ -1,3 +1,6 @@
+## 
+Neste diretório possuimos o arquivo **topology.yaml** que servirá como referencia para realizarmos nossas atividades de automação.
+
 1. **Configuração Inicial do OSPF**
     
     * Ative o OSPF em todos os roteadores usando o processo ID 1.
@@ -6,7 +9,7 @@
         
 2. **Personalização do Router-ID**
     
-    * Defina manualmente o Router-ID de R1 como **1.1.1.2** via script Netmiko.
+    * Defina manualmente o Router-ID de R1 como **11.11.11.11** via script Netmiko.
     * Verifique em R2 e R3 (usando show ip ospf neighbor) se o Router-ID foi atualizado.
         
 3. **Controle do Designated Router (DR)**

@@ -30,7 +30,7 @@ Configure um ambiente OSPF multiárea robusto **usando automação de rede com N
     
     device = {
         'device_type': 'arista_eos', # ou 'cisco_ios'
-        'ip': '172.20.20.11',
+        'host': '172.20.20.11',
         'username': 'admin',
         'password': 'admin'
     }
