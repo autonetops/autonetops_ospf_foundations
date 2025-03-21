@@ -73,5 +73,5 @@
     }
   },
   "postCreateCommand": "/bin/postCreate.sh",
-  "postStartCommand": ["containerlab", "deploy", "-t", "../lab2_med_arista.clab.yaml"]
+  "postStartCommand": ["containerlab", "deploy", "-t", "../vault_ospf_intermediario.clab.yaml"]
 }
