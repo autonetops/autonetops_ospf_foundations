@@ -89,6 +89,7 @@ Configure um ambiente OSPF multiárea robusto **usando automação de rede com N
 * **Netmiko**: Use esta biblioteca Python para enviar comandos de configuração e validação aos roteadores via SSH. Exemplo básico:
     
     ```python
+    
     from netmiko import ConnectHandler
     
     device = {
