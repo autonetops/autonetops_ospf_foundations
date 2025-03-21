@@ -11,7 +11,7 @@
       "memory": "16gb",
       "storage": "32gb"
   },
-  "workspaceMount": "source=${localWorkspaceFolder}/lab2_med,target=/workspace,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder}/vault_ospf_intermediario,target=/workspace,type=bind",
   "workspaceFolder": "/workspace/tasks",
   "containerEnv": {
       "ANO_CLAB_VERSION": "${localEnv:ANO_CLAB_VERSION}",
@@ -34,7 +34,7 @@
   "customizations": {
       "codespaces": {
         "openFiles": [
-          "task1.md"
+          "../index.md"
         ]
       },
       "vscode": {
@@ -63,14 +63,6 @@
                 "marp-team.marp-vscode"
             ]
       }
-  },
-  "forwardPorts": [2222],
-  "portsAttributes": {
-    "2222": {
-      "label": "FastAPI",
-      "protocol": "http",
-      "visibility": "public"
-    }
   },
   "postCreateCommand": "/bin/postCreate.sh",
   "postStartCommand": ["containerlab", "deploy", "-t", "../vault_ospf_intermediario.clab.yaml"]
