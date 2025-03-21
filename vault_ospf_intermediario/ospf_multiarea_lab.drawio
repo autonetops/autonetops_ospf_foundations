@@ -1,0 +1,100 @@
+<mxfile host="65bd71144e" compressed="false">
+    <diagram id="OSPF Multiárea Lab" name="OSPF Multiárea Lab">
+        <mxGraphModel dx="2437" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <object label="R1 172.20.20.11" id="R1">
+                    <mxCell style="shape=mxgraph.cisco.routers.router;html=1;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;" parent="1" vertex="1">
+                        <mxGeometry x="100" y="300" width="80" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="R2 172.20.20.12" id="R2">
+                    <mxCell style="shape=mxgraph.cisco.routers.router;html=1;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;" parent="1" vertex="1">
+                        <mxGeometry x="620" y="290" width="80" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="R3 172.20.20.13" id="R3">
+                    <mxCell style="shape=mxgraph.cisco.routers.router;html=1;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;" parent="1" vertex="1">
+                        <mxGeometry x="620" y="670" width="80" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="R4 172.20.20.14" id="R4">
+                    <mxCell style="shape=mxgraph.cisco.routers.router;html=1;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;" parent="1" vertex="1">
+                        <mxGeometry x="100" y="670" width="80" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="eth1-eth1 Area 1 (NSSA)" source="R1" target="R2" id="ad33d5f774567043f18d5cb3eb96e078">
+                    <mxCell style="endArrow=block;html=1;strokeWidth=2;strokeColor=#FF3399;dashed=0;" parent="1" source="R1" target="R2" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="eth2-eth1 Area 0" source="R2" target="R3" id="e198fb39c8af61955dacb4e3f3784d16">
+                    <mxCell style="endArrow=block;html=1;strokeWidth=2;strokeColor=#FF3399;dashed=0;" parent="1" source="R2" target="R3" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="eth2-eth1 Area 0" source="R3" target="R4" id="dfbdab2e1e5508019f37a7506719a498">
+                    <mxCell style="endArrow=block;html=1;strokeWidth=2;strokeColor=#FF3399;dashed=0;" parent="1" source="R3" target="R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="eth2-eth2 Area 0" source="R1" target="R4" id="f260f15736cbc0b2702055b58a564a14">
+                    <mxCell style="endArrow=block;html=1;strokeWidth=2;strokeColor=#FF3399;dashed=0;" parent="1" source="R1" target="R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Auth: Cleartext Hello: 10s, Dead: 60s" id="R2-R4">
+                    <mxCell style="shape=ellipse;fillColor=#f8cecc;strokeColor=#FF3399;" parent="1" vertex="1">
+                        <mxGeometry x="340" y="500" width="60" height="40" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="" source="R2" target="R2-R4" id="d36f13e4097322c9f3b40435af6d3573">
+                    <mxCell style="dashed=1;strokeColor=#000000;" parent="1" source="R2" target="R2-R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="" source="R2-R4" target="R4" id="c07eea22a331ebf05d3ba44bc6103202">
+                    <mxCell style="dashed=1;strokeColor=#000000;" parent="1" source="R2-R4" target="R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Auth: MD5" id="R3-R4">
+                    <mxCell style="shape=ellipse;fillColor=#f8cecc;strokeColor=#FF3399;" parent="1" vertex="1">
+                        <mxGeometry x="470" y="790" width="60" height="40" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="" source="R3" target="R3-R4" id="93f80e3af33610f925702e666010f807">
+                    <mxCell style="dashed=1;strokeColor=#000000;" parent="1" source="R3" target="R3-R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="" source="R3-R4" target="R4" id="025e9b65b270c62d0e9fc67bb5b779b7">
+                    <mxCell style="dashed=1;strokeColor=#000000;" parent="1" source="R3-R4" target="R4" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Loopbacks R4 172.16.0.0/22 (Area 2)" id="R4-LB">
+                    <mxCell style="shape=rectangle;fillColor=#FFD700;strokeColor=#000000;" parent="1" vertex="1">
+                        <mxGeometry x="90" y="850" width="100" height="60" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Area 2" source="R4" target="R4-LB" id="01c8ad4d04a31f30edb35df4c1bdfa92">
+                    <mxCell style="endArrow=block;html=1;strokeWidth=2;strokeColor=#FF3399;dashed=0;" parent="1" source="R4" target="R4-LB" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Loopback14 172.16.4.1/24 (Rota Estática)" id="R4-LB14">
+                    <mxCell style="shape=rectangle;fillColor=#FFD700;strokeColor=#000000;" parent="1" vertex="1">
+                        <mxGeometry x="-60" y="810" width="100" height="60" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Static" source="R4" target="R4-LB14" id="562bbb8b2402eacac6eeaeeaa064c2ef">
+                    <mxCell style="dashed=1;strokeColor=#000000;" parent="1" source="R4" target="R4-LB14" edge="1">
+                        <mxGeometry relative="1" as="geometry"/>
+                    </mxCell>
+                </object>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

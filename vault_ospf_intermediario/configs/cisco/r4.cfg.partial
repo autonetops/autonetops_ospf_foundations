@@ -1,0 +1,24 @@
+username admin secret autonetops
+!
+management api http-commands
+   no shut
+!
+hostname r4
+ip routing
+!
+int Ethernet1
+  desc To-R3
+  no shut
+  no switchport
+  ip add 192.168.13.1/24
+!
+int eth2
+  desc To-R2
+  no shut
+  no switchport
+  ip add 192.168.12.1/24
+!
+int lo0
+  ip add 1.1.1.1/32
+int lo1
+  ip add 10.1.0.1/32
