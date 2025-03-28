@@ -1,6 +1,0 @@
-napalm
-fastapi[standard]
-ipython
-ipdb
-pynetbox
-Jinja2
