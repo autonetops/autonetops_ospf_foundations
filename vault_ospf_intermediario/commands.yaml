@@ -1,11 +1,11 @@
-- echo "alias r1='sshpass -p admin ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.11'" >> ~/.bashrc
-- echo "alias r2='sshpass -p admin ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.12'" >> ~/.bashrc
-- echo "alias r3='sshpass -p admin ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.13'" >> ~/.bashrc
-- echo "alias r4='sshpass -p admin ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.14'" >> ~/.bashrc
-- echo "r1 172.20.20.11" >> /etc/hosts
-- echo "r2 172.20.20.12" >> /etc/hosts
-- echo "r3 172.20.20.13" >> /etc/hosts
-- echo "r4 172.20.20.14" >> /etc/hosts
+- echo "alias r1='sshpass -p autonetops ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.11'" >> ~/.bashrc
+- echo "alias r2='sshpass -p autonetops ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.12'" >> ~/.bashrc
+- echo "alias r3='sshpass -p autonetops ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.13'" >> ~/.bashrc
+- echo "alias r4='sshpass -p autonetops ssh -o \"StrictHostKeyChecking no\" admin@172.20.20.14'" >> ~/.bashrc
+- echo "172.20.20.11 r1" >> /etc/hosts
+- echo "172.20.20.12 r2" >> /etc/hosts
+- echo "172.20.20.13 r3" >> /etc/hosts
+- echo "172.20.20.14 r4" >> /etc/hosts
 
 
 - echo 'export TF_VAR_VPN_CODESPACES_2222="https://$CODESPACE_NAME-2222.app.github.dev"' >> ~/.bashrc

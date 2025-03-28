@@ -1,24 +1,24 @@
 - name: r1
   netmiko:
     host: 172.20.20.11
-    device_type: arista_eos
+    device_type: cisco_ios
     username: admin
     password: autonetops
 - name: r2
   netmiko:
     host: 172.20.20.12
-    device_type: arista_eos
+    device_type: cisco_ios
     username: admin
     password: autonetops
 - name: r3
   netmiko:
     host: 172.20.20.13
-    device_type: arista_eos
+    device_type: cisco_ios
     username: admin
     password: autonetops
 - name: r4
   netmiko:
     host: 172.20.20.14
-    device_type: arista_eos
+    device_type: cisco_ios
     username: admin
     password: autonetops
