@@ -2,26 +2,26 @@ name: vault_ospf_intermediario
 
 topology:
   defaults:
-    kind: ceos
-    startup-config: configs/arista/__clabNodeName__.cfg
+    kind: cisco_iol
+    startup-config: configs/cisco/__clabNodeName__.partial.cfg
 
   nodes:
     r1:
       mgmt-ipv4: 172.20.20.11
-      kind: ceos
-      image: ghcr.io/autonetops/ceos:latest
+
+      image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
     r2:
       mgmt-ipv4: 172.20.20.12
-      kind: ceos
-      image: ghcr.io/autonetops/ceos:latest
+
+      image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
     r3:
       mgmt-ipv4: 172.20.20.13
-      kind: ceos
-      image: ghcr.io/autonetops/ceos:latest
+
+      image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
     r4:
       mgmt-ipv4: 172.20.20.14
-      kind: ceos
-      image: ghcr.io/autonetops/ceos:latest
+
+      image: ghcr.io/autonetops/autonetops_labs/cisco_iol:latest
   
   links:
     - endpoints: ["r1:eth1", "r2:eth1"]
