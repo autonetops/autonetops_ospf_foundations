@@ -1,7 +1,7 @@
 import yaml
 from netmiko import ConnectHandler
 
-with open('../topology.yaml', 'r') as file:
+with open('topology.yaml', 'r') as file:
 	topology = yaml.safe_load(file)
 
 for device in topology:
