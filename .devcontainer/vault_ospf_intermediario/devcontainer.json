@@ -8,10 +8,12 @@
     "containerEnv": {
         "ANO_CLAB_VERSION": "${localEnv:ANO_CLAB_VERSION}",
         "ANO_PRIV_KEY_NAME": "${localEnv:ANO_PRIV_KEY_NAME}",
-        "ANO_ARISTA_ROUTER_VERSION": "${localEnv:ANO_ARISTA_ROUTER_VERSION}"
+        "ANO_ARISTA_ROUTER_VERSION": "${localEnv:ANO_ARISTA_ROUTER_VERSION}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}"
     },
     "workspaceMount": "source=${localWorkspaceFolder}/vault_ospf_intermediario,target=/vault_ospf_intermediario,type=bind",
-    "workspaceFolder": "/vault_ospf_intermediario/tasks",
-    "postCreateCommand": "python3 /bin/postCreate.py --run ../commands.yaml",
+    "workspaceFolder": "/vault_ospf_intermediario",
+    "postCreateCommand": "python3 /bin/postCreate.py --run commands.yaml",
     "postStartCommand": ["containerlab", "deploy", "-t", "/vault_ospf_intermediario/clab/lab.clab.yaml"]
 }
