@@ -1,14 +1,14 @@
 import yaml
 from netmiko import ConnectHandler
 
-with open('topology.yaml', 'r') as file:
+with open('solutions/topology.yaml', 'r') as file:
 	topology = yaml.safe_load(file)
 
 for device in topology:
 	config_commands = [
 		'router ospf 1',
 		f'router-id {device["netmiko"]["host"]}',
-		'network 192.168.0.0/16 area 0',
+		'network 192.168.0.0 0.0.255.255 area 0',
 	]
 
 	net_connect = ConnectHandler(**device["netmiko"])

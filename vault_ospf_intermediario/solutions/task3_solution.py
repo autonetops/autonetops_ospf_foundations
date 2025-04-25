@@ -2,7 +2,7 @@
 from helpers import load_yaml, send_config_netmiko, send_show_netmiko
 from netmiko import ConnectHandler
 
-topology = load_yaml("topology.yaml")
+topology = load_yaml("solutions/topology.yaml")
 device_name = input('Digite o nome do roteador: ') #r3
 
 #filter_topology = [device for device in topology if device["name"] == device_name]

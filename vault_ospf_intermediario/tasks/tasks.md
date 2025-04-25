@@ -1,4 +1,4 @@
-## 
+## Tarefas
 Neste diretório possuimos o arquivo **topology.yaml** que servirá como referencia para realizarmos nossas atividades de automação.
 
 1. **Configuração Inicial do OSPF**
@@ -6,21 +6,29 @@ Neste diretório possuimos o arquivo **topology.yaml** que servirá como referen
     * Ative o OSPF em todos os roteadores usando o processo ID 1.
     * Todas as redes inicialmente devem estar na **Área 0**, exceto onde especificado.
     * Garanta que qualquer IP possa ser pingado de qualquer roteador.
+
+    > python3 solutions/task1_solution.py
         
 2. **Personalização do Router-ID**
     
     * Defina manualmente o Router-ID de R1 como **11.11.11.11** via script Netmiko.
-    * Verifique em R2 e R3 (usando show ip ospf neighbor) se o Router-ID foi atualizado.
+    * Verifique em R2 e R4 (usando show ip ospf neighbor) se o Router-ID foi atualizado. Obs: **clear ip ospf process**
+
+    > python3 solutions/task2_solution.py
         
 3. **Controle do Designated Router (DR)**
     
     * Configure R3 como o **Designated Router (DR)** no segmento entre R2 e R3 (link eth2 de R2 e eth1 de R3). Ajuste a prioridade OSPF para garantir isso.
+
+    > python3 solutions/task3_solution.py
         
 4. **Manipulação de Métricas**
     
     * Altere a métrica no enlace entre R1 e R2 (eth1) **sem usar ip ospf cost**. Use a largura de banda da interface para influenciar a métrica.
     * Ajuste a largura de banda de referência (reference bandwidth) em todos os roteadores para **1500** via automação.
         
+    > python3 solutions/task4_solution.py
+
 5. **Autenticação OSPF**
     
     * Habilite autenticação em texto claro entre R2 e R3 com a senha **"ospf123"**.
