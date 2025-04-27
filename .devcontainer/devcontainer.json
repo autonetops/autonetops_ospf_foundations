@@ -1,0 +1,8 @@
+{
+    "image": "ghcr.io/autonetops/autonetops_ghcr_clab_template/autonetops_base_image:latest",
+    "workspaceMount": "source=${localWorkspaceFolder}/vault_ospf_intermediario,target=/vault_ospf_intermediario,type=bind,consistency=cached",
+    "workspaceFolder": "/vault_ospf_intermediario",
+    "postCreateCommand": "python3 /bin/postCreate.py postcreate --run commands.yaml",
+    "postStartCommand": ["containerlab", "deploy", "-t", "/vault_ospf_intermediario/clab/lab.clab.yaml"]
+
+}
