@@ -9,7 +9,7 @@
         "memory": "16gb",
         "storage": "32gb"
     },
-    "workspaceMount": "source=${localWorkspaceFolder}/aotunetops_bgp_ospf,target=/aotunetops_bgp_ospf,type=bind",
+    "workspaceMount": "source=${localWorkspaceFolder}/autonetops_ospf_foundations/aotunetops_bgp_ospf,target=/aotunetops_bgp_ospf,type=bind",
     "workspaceFolder": "/aotunetops_bgp_ospf",
     "postCreateCommand": "chmod 700 /workspaces/autonetops_ospf_foundations",
     "postStartCommand": "python3 /bin/postCreate.py postcreate --run commands.yaml",
