@@ -1,0 +1,13 @@
+r1:
+  conn:
+    host: r1
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    route-map LP400 permit 10
+      set local-preference 400
+    router bgp 65012
+      neighbor 13.13.13.3 route-map LP400 in
+      

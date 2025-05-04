@@ -1,0 +1,21 @@
+r2:
+  conn:
+    host: r2
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    router ospf 1
+      network 23.23.23.2 0.0.0.0 area 0
+r3:
+  conn:
+    host: r3
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    router ospf 1
+      network 23.23.23.3 0.0.0.0 area 0
+      network 3.3.3.3 0.0.0.0 area 0

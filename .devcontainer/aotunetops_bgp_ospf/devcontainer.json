@@ -1,0 +1,18 @@
+{
+    "image": "ghcr.io/autonetops/autonetops_ghcr_clab_template/autonetops_base_image:latest",
+    "containerEnv": {
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}"
+    },
+    "hostRequirements": {
+        "cpus": 4,
+        "memory": "16gb",
+        "storage": "32gb"
+    },
+    "workspaceMount": "source=${localWorkspaceFolder}/aotunetops_bgp_ospf,target=/aotunetops_bgp_ospf,type=bind",
+    "workspaceFolder": "/aotunetops_bgp_ospf",
+    "postCreateCommand": "chmod 700 /workspaces/autonetops_ospf_foundations",
+    "postStartCommand": "python3 /bin/postCreate.py postcreate --run commands.yaml",
+    //"postStartCommand": ["containerlab", "deploy", "-t", "/aotunetops_bgp_ospf/clab/lab.clab.yaml"]
+    "postAttachCommand": ["containerlab", "deploy", "-t", "/aotunetops_bgp_ospf/clab/lab.clab.yaml"]
+}

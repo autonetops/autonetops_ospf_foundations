@@ -1,0 +1,22 @@
+r1:
+  conn:
+    host: r1
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    router bgp 65012
+      neighbor 12.12.12.2 remote-as 65012
+      neighbor 12.12.12.2 next-hop-self
+r2:
+  conn:
+    host: r2
+    device_type: cisco_ios
+    username: admin
+    password: autonetops
+    port: 22
+  config: |
+    router bgp 65012
+      neighbor 12.12.12.1 remote-as 65012
+      neighbor 12.12.12.1 next-hop-self
