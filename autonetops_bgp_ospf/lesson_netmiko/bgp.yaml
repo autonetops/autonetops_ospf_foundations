@@ -1,0 +1,46 @@
+r1:
+  conn:
+    host: "r1"
+    username: "admin"
+    password: "autonetops"
+    device_type: "cisco_ios"
+
+  bgp:
+    asn: 65012
+    router_id: 1.1.1.1
+    neighbors:
+      - ip: 13.13.13.3
+        remote_as: 65003
+
+r2:
+  conn:
+    host: "r2"
+    username: "admin"
+    password: "autonetops"
+    device_type: "cisco_ios"
+
+  bgp:
+    asn: 65012
+    router_id: 2.2.2.2
+    neighbors:
+      - ip: 23.23.23.3
+        remote_as: 65003
+
+r3: 
+  conn:
+    host: "r3"
+    username: "admin"
+    password: "autonetops"
+    device_type: "cisco_ios"
+
+  bgp:
+    asn: 6503
+    router_id: 3.3.3.3
+    neighbors:
+      - ip: 13.13.13.1
+        remote_as: 65012
+      - ip: 23.23.23.2
+        remote_as: 65012
+    networks:
+      - prefix: 3.3.3.0
+        mask: 255.255.255.0
