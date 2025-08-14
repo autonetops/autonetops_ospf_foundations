@@ -1,6 +1,6 @@
 # eBGP vs. iBGP vs. OSPF
 
-    Utilizado na aula [Context Manager e Exceptions Netmiko](https://autonetops.com/courses/admin/lesson/context-manager-except/)
+> Utilizado na aula [Context Manager e Exceptions Netmiko](https://autonetops.com/courses/admin/lesson/context-manager-except/)
 
 ## Objetivos de Aprendizado
 
