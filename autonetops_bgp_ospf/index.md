@@ -1,5 +1,7 @@
 # eBGP vs. iBGP vs. OSPF
 
+    Utilizado na aula [Context Manager e Exceptions Netmiko](https://autonetops.com/courses/admin/lesson/context-manager-except/)
+
 ## Objetivos de Aprendizado
 
 Desafio levantado durante entrevista de emprego. Verificar desempate entre BGP e outros protocolos (OSPF) no cisco.
