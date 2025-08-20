@@ -1,0 +1,436 @@
+[
+    {
+        "device": "r1",
+        "output_version": {
+            "version": {
+                "version_short": "17.12",
+                "platform": "Linux",
+                "version": "17.12.1",
+                "image_id": "X86_64BI_LINUX-ADVENTERPRISEK9-M",
+                "label": "RELEASE SOFTWARE (fc5)",
+                "os": "IOS",
+                "location": "Dublin",
+                "image_type": "production image",
+                "copyright_years": "1986-2023",
+                "compiled_date": "Thu 27-Jul-23 22:33",
+                "compiled_by": "mcpre",
+                "rom": "Bootstrap program is Linux",
+                "hostname": "r1",
+                "uptime": "2 hours, 20 minutes",
+                "system_image": "unix:/iol/iol.bin",
+                "last_reload_reason": "Unknown reason",
+                "chassis_sn": "1",
+                "number_of_intfs": {
+                    "Ethernet": "4"
+                },
+                "processor_board_flash": "1024K",
+                "curr_config_register": "0x0"
+            }
+        },
+        "output_ip_int_br": [
+            {
+                "interface": "Ethernet0/0",
+                "ip_address": "172.20.20.11",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/1",
+                "ip_address": "12.12.12.1",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/2",
+                "ip_address": "13.13.13.1",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/3",
+                "ip_address": "unassigned",
+                "status": "administratively down",
+                "proto": "down"
+            },
+            {
+                "interface": "Loopback0",
+                "ip_address": "1.1.1.1",
+                "status": "up",
+                "proto": "up"
+            }
+        ],
+        "output_ip_ospf": ""
+    },
+    {
+        "device": "r2",
+        "output_version": {
+            "version": {
+                "version_short": "17.12",
+                "platform": "Linux",
+                "version": "17.12.1",
+                "image_id": "X86_64BI_LINUX-ADVENTERPRISEK9-M",
+                "label": "RELEASE SOFTWARE (fc5)",
+                "os": "IOS",
+                "location": "Dublin",
+                "image_type": "production image",
+                "copyright_years": "1986-2023",
+                "compiled_date": "Thu 27-Jul-23 22:33",
+                "compiled_by": "mcpre",
+                "rom": "Bootstrap program is Linux",
+                "hostname": "r2",
+                "uptime": "2 hours, 20 minutes",
+                "system_image": "unix:/iol/iol.bin",
+                "last_reload_reason": "Unknown reason",
+                "chassis_sn": "2",
+                "number_of_intfs": {
+                    "Ethernet": "4"
+                },
+                "processor_board_flash": "1024K",
+                "curr_config_register": "0x0"
+            }
+        },
+        "output_ip_int_br": [
+            {
+                "interface": "Ethernet0/0",
+                "ip_address": "172.20.20.12",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/1",
+                "ip_address": "12.12.12.2",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/2",
+                "ip_address": "23.23.23.2",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/3",
+                "ip_address": "unassigned",
+                "status": "administratively down",
+                "proto": "down"
+            },
+            {
+                "interface": "Loopback0",
+                "ip_address": "2.2.2.2",
+                "status": "up",
+                "proto": "up"
+            }
+        ],
+        "output_ip_ospf": {
+            "vrf": {
+                "default": {
+                    "address_family": {
+                        "ipv4": {
+                            "instance": {
+                                "1": {
+                                    "router_id": "2.2.2.2",
+                                    "enable": true,
+                                    "nsr": {
+                                        "enable": false
+                                    },
+                                    "bfd": {
+                                        "enable": false
+                                    },
+                                    "start_time": "01:36:51.502",
+                                    "elapsed_time": "00:43:45.375",
+                                    "opqaue_lsa": true,
+                                    "lls": true,
+                                    "area_transit": true,
+                                    "nssa": true,
+                                    "db_exchange_summary_list_optimization": true,
+                                    "database_control": {
+                                        "max_lsa": 50000,
+                                        "max_lsa_current": 1,
+                                        "max_lsa_threshold_value": 75,
+                                        "max_lsa_ignore_time": 300,
+                                        "max_lsa_reset_time": 600,
+                                        "max_lsa_ignore_count": 5,
+                                        "max_lsa_current_count": 0
+                                    },
+                                    "event_log": {
+                                        "enable": true,
+                                        "max_events": 1000,
+                                        "mode": "cyclic"
+                                    },
+                                    "stub_router": {
+                                        "always": {
+                                            "always": false,
+                                            "include_stub": false,
+                                            "summary_lsa": false,
+                                            "external_lsa": false
+                                        }
+                                    },
+                                    "spf_control": {
+                                        "throttle": {
+                                            "spf": {
+                                                "start": 50,
+                                                "hold": 200,
+                                                "maximum": 5000
+                                            },
+                                            "lsa": {
+                                                "start": 50,
+                                                "hold": 200,
+                                                "maximum": 5000,
+                                                "arrival": 100
+                                            }
+                                        },
+                                        "incremental_spf": false
+                                    },
+                                    "lsa_group_pacing_timer": 240,
+                                    "interface_flood_pacing_timer": 33,
+                                    "retransmission_pacing_timer": 66,
+                                    "adjacency_stagger": {
+                                        "initial_number": 300,
+                                        "maximum_number": 300
+                                    },
+                                    "numbers": {
+                                        "external_lsa": 0,
+                                        "external_lsa_checksum": "0x000000",
+                                        "opaque_as_lsa": 0,
+                                        "opaque_as_lsa_checksum": "0x000000",
+                                        "dc_bitless": 0,
+                                        "do_not_age": 0
+                                    },
+                                    "total_areas": 1,
+                                    "total_normal_areas": 1,
+                                    "total_stub_areas": 0,
+                                    "total_nssa_areas": 0,
+                                    "total_areas_transit_capable": 0,
+                                    "external_flood_list_length": 0,
+                                    "graceful_restart": {
+                                        "ietf": {
+                                            "type": "ietf",
+                                            "helper_enable": true,
+                                            "enable": false
+                                        },
+                                        "cisco": {
+                                            "type": "cisco",
+                                            "helper_enable": true,
+                                            "enable": false
+                                        }
+                                    },
+                                    "auto_cost": {
+                                        "reference_bandwidth": 100,
+                                        "bandwidth_unit": "mbps",
+                                        "enable": false
+                                    },
+                                    "areas": {
+                                        "0.0.0.0": {
+                                            "area_id": "0.0.0.0",
+                                            "area_type": "normal",
+                                            "statistics": {
+                                                "interfaces_count": 1,
+                                                "spf_last_executed": "00:43:44.004",
+                                                "spf_runs_count": 3,
+                                                "area_scope_lsa_count": 2,
+                                                "area_scope_lsa_cksum_sum": "0x00BCEF",
+                                                "area_scope_opaque_lsa_count": 0,
+                                                "area_scope_opaque_lsa_cksum_sum": "0x000000",
+                                                "dcbitless_lsa_count": 0,
+                                                "indication_lsa_count": 0,
+                                                "donotage_lsa_count": 0,
+                                                "flood_list_length": 0
+                                            },
+                                            "ranges": {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "device": "r3",
+        "output_version": {
+            "version": {
+                "version_short": "17.12",
+                "platform": "Linux",
+                "version": "17.12.1",
+                "image_id": "X86_64BI_LINUX-ADVENTERPRISEK9-M",
+                "label": "RELEASE SOFTWARE (fc5)",
+                "os": "IOS",
+                "location": "Dublin",
+                "image_type": "production image",
+                "copyright_years": "1986-2023",
+                "compiled_date": "Thu 27-Jul-23 22:33",
+                "compiled_by": "mcpre",
+                "rom": "Bootstrap program is Linux",
+                "hostname": "r3",
+                "uptime": "2 hours, 20 minutes",
+                "system_image": "unix:/iol/iol.bin",
+                "last_reload_reason": "Unknown reason",
+                "chassis_sn": "3",
+                "number_of_intfs": {
+                    "Ethernet": "4"
+                },
+                "processor_board_flash": "1024K",
+                "curr_config_register": "0x0"
+            }
+        },
+        "output_ip_int_br": [
+            {
+                "interface": "Ethernet0/0",
+                "ip_address": "172.20.20.13",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/1",
+                "ip_address": "13.13.13.3",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/2",
+                "ip_address": "23.23.23.3",
+                "status": "up",
+                "proto": "up"
+            },
+            {
+                "interface": "Ethernet0/3",
+                "ip_address": "unassigned",
+                "status": "administratively down",
+                "proto": "down"
+            },
+            {
+                "interface": "Loopback0",
+                "ip_address": "3.3.3.3",
+                "status": "up",
+                "proto": "up"
+            }
+        ],
+        "output_ip_ospf": {
+            "vrf": {
+                "default": {
+                    "address_family": {
+                        "ipv4": {
+                            "instance": {
+                                "1": {
+                                    "router_id": "3.3.3.3",
+                                    "enable": true,
+                                    "nsr": {
+                                        "enable": false
+                                    },
+                                    "bfd": {
+                                        "enable": false
+                                    },
+                                    "start_time": "01:36:52.545",
+                                    "elapsed_time": "00:43:45.435",
+                                    "opqaue_lsa": true,
+                                    "lls": true,
+                                    "area_transit": true,
+                                    "nssa": true,
+                                    "db_exchange_summary_list_optimization": true,
+                                    "database_control": {
+                                        "max_lsa": 50000,
+                                        "max_lsa_current": 1,
+                                        "max_lsa_threshold_value": 75,
+                                        "max_lsa_ignore_time": 300,
+                                        "max_lsa_reset_time": 600,
+                                        "max_lsa_ignore_count": 5,
+                                        "max_lsa_current_count": 0
+                                    },
+                                    "event_log": {
+                                        "enable": true,
+                                        "max_events": 1000,
+                                        "mode": "cyclic"
+                                    },
+                                    "stub_router": {
+                                        "always": {
+                                            "always": false,
+                                            "include_stub": false,
+                                            "summary_lsa": false,
+                                            "external_lsa": false
+                                        }
+                                    },
+                                    "spf_control": {
+                                        "throttle": {
+                                            "spf": {
+                                                "start": 50,
+                                                "hold": 200,
+                                                "maximum": 5000
+                                            },
+                                            "lsa": {
+                                                "start": 50,
+                                                "hold": 200,
+                                                "maximum": 5000,
+                                                "arrival": 100
+                                            }
+                                        },
+                                        "incremental_spf": false
+                                    },
+                                    "lsa_group_pacing_timer": 240,
+                                    "interface_flood_pacing_timer": 33,
+                                    "retransmission_pacing_timer": 66,
+                                    "adjacency_stagger": {
+                                        "initial_number": 300,
+                                        "maximum_number": 300
+                                    },
+                                    "numbers": {
+                                        "external_lsa": 0,
+                                        "external_lsa_checksum": "0x000000",
+                                        "opaque_as_lsa": 0,
+                                        "opaque_as_lsa_checksum": "0x000000",
+                                        "dc_bitless": 0,
+                                        "do_not_age": 0
+                                    },
+                                    "total_areas": 1,
+                                    "total_normal_areas": 1,
+                                    "total_stub_areas": 0,
+                                    "total_nssa_areas": 0,
+                                    "total_areas_transit_capable": 0,
+                                    "external_flood_list_length": 0,
+                                    "graceful_restart": {
+                                        "ietf": {
+                                            "type": "ietf",
+                                            "helper_enable": true,
+                                            "enable": false
+                                        },
+                                        "cisco": {
+                                            "type": "cisco",
+                                            "helper_enable": true,
+                                            "enable": false
+                                        }
+                                    },
+                                    "auto_cost": {
+                                        "reference_bandwidth": 100,
+                                        "bandwidth_unit": "mbps",
+                                        "enable": false
+                                    },
+                                    "areas": {
+                                        "0.0.0.0": {
+                                            "area_id": "0.0.0.0",
+                                            "area_type": "normal",
+                                            "statistics": {
+                                                "interfaces_count": 2,
+                                                "spf_last_executed": "00:43:45.104",
+                                                "spf_runs_count": 2,
+                                                "area_scope_lsa_count": 2,
+                                                "area_scope_lsa_cksum_sum": "0x00BCEF",
+                                                "area_scope_opaque_lsa_count": 0,
+                                                "area_scope_opaque_lsa_cksum_sum": "0x000000",
+                                                "dcbitless_lsa_count": 0,
+                                                "indication_lsa_count": 0,
+                                                "donotage_lsa_count": 0,
+                                                "flood_list_length": 0
+                                            },
+                                            "ranges": {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+]
